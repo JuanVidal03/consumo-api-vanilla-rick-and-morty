@@ -1,0 +1,403 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: #fff;
+    color: #1e1e1e;
+}
+
+.container-padding{
+    padding: 3rem 4rem;
+}
+
+h1, h2, h3, h4, h5, h6, div, p, section, main, nav, ul, li,a, figure, img, span{
+    background-color: transparent;
+}
+h1 { font-size: 3.5rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2.7rem; }
+h4 { font-size: 2.5rem; }
+h5 { font-size: 2rem; }
+h6 { font-size: 1.5rem; }
+p {
+    font-size: 1.1rem;
+    color: #dad7d7;
+}
+
+.btn{
+    padding: .7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: all .3s ease-in-out;
+    font-weight: 600;
+    display: inline-block;
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+.transparent-btn{
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.transparent-btn:hover{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px 1px #fff;
+}
+.white-btn{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fff;
+}
+.white-btn:hover{
+    box-shadow: 0px 0px 10px 1px #fff;
+}
+
+
+/* navbar styles */
+.navbar-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.navbar{
+    width: 100%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.048);
+    backdrop-filter: blur(60px);
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px #6e6e6e2f;
+    padding: .3rem;
+}
+.navbar-item{
+    list-style: none;
+    padding: .1rem 0;
+    display: flex;
+    justify-content: center;
+}
+.navbar-item a{
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: .5rem;
+    transition: all .3s ease;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.navbar-item a::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    transition: all ease .3s;
+}
+.navbar-item a:hover::after{
+    top: 80%;
+}
+/* hero styles */
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.hero::after{
+    position: absolute;
+    content: '';
+    width: 90%;
+    height: 95%;
+    background-color: #8b11e2;
+    top: -10%;
+    left: -20%;
+    border-radius: 100px;
+    z-index: 1;
+    transform: rotate(170deg);
+}
+.hero-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+}
+.hero-info, .hero-image{
+    width: 50%;
+}
+.hero-image{
+    display: flex;
+    justify-content: center;
+    animation: bounce 3s infinite ease;
+}
+@keyframes bounce {
+    0%{
+        transform: scale(1.01);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.01);
+    }
+}
+.hero-info h1{
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+}
+.hero-info p{
+    margin-bottom: 1.5rem;
+}
+.hero-image img{
+    width: 85%;
+}
+/* personajes */
+.personajes .personajes-text{
+    margin-bottom: 3rem;
+}
+#personajes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.personaje-card{
+    width: 100%;
+    max-width: 23%;
+    height: 550px;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease .3s;
+    border: solid #f2f2f2 .1rem;
+}
+.personaje-card:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px #ffffff;
+}
+.personaje-card figure{
+    width: 100%;
+    background-color: #8b11e2;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.personaje-card figure img{
+    width: 60%;
+    border-radius: 100%;
+}
+.personaje-info-container{
+    padding: 1rem;
+}
+.personaje-info-status{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: .5rem 0;
+}
+.personaje-info-especie{
+    margin-bottom: 0px !important;
+}
+.status{
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 100%;
+}
+.alive{ background-color: lime; }
+.dead{ background-color: red; }
+
+.personaje-info{
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+}
+.personaje-info p{
+    color: #adadad;
+}
+.personajes-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 2rem;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+/* cta */
+.cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cta .cta-info{
+    background: linear-gradient(to right, #8b11e2, #ab49cc69);
+    border-radius: 30px;
+    padding: 3rem 2rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.cta .cta-btn-container{
+    padding-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+.cta-info-container{
+    width: 100%;
+    max-width: 800px;
+}
+.cta-img-container{
+    position: absolute;
+    width: 40%;
+    top: -10%;
+    right: -7%;
+    z-index: -2;
+}
+.cta-img-container img{
+    width: 100%;
+}
+
+
+/* ubicaciones */
+#ubicaciones{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.ubicacion-card{
+    width: 100%;
+    max-width: 23%;
+    height: 300px;
+    border-radius: 20px;
+    transition: all ease .3s;
+    border: solid #f2f2f2 .1rem;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    padding: 2rem 1rem;
+}
+.ubicacion-card::after{
+    position: absolute;
+    content: '';
+    background-color: #8b11e2;
+    width: 500px;
+    height: 500px;
+    top: -90%;
+    left: -80%;
+    z-index: -1;
+    border-radius: 100%;
+    transition: all ease .3s;
+}
+.ubicacion-card:hover::after{
+    top: 0%;
+    left: 10%;
+}
+.ubicacion-card h6{
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.ubicacion-card h6::after{
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+}
+.ubicacion-btn-container{
+    padding-top: 1rem;
+}
+
+
+/* modal */
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #00000034;
+    backdrop-filter: blur(30px);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: all ease .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-open{
+    opacity: 1;
+    visibility: visible;
+}
+.modal-close{
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-open-btn{
+    cursor: pointer;
+}
+.modal-container{
+    width: 700px;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 3rem;
+    position: relative;
+}
+.modal-close-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: none;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: #8b11e2;
+    cursor: pointer;
+}
+.modal-container h6{
+    color: #000;
+}
+
+/* footer */
+footer{
+    background-color: #1b1b1b;
+    padding: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    text-decoration: none;
+    font-weight: 700;
+}

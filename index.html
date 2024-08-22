@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty API - Juan Vidal</title>
+    <link rel="shortcut icon" href="./images/rick-morty-hero.png" type="image/x-icon">
+    <!-- styles -->
+     <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <section id="hero" class="hero container-padding">
+        <nav class="navbar-container">
+            <ul class="navbar">
+                <li class="navbar-item"><a href="#hero">Inicio</a></li>
+                <li class="navbar-item"><a href="#personajes-section">Personajes</a></li>
+                <li class="navbar-item"><a href="#ubicaciones-section">Ubicaciones</a></li>
+                <li class="navbar-item"><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-container">
+            <div class="hero-info">
+                <h1>Explora el Multiverso de Rick and Morty</h1>
+                <p>¿Eres fan de Rick y Morty? ¡Entonces este proyecto es para ti! Estoy creando una plataforma en línea donde podrás descubrir y conocer a fondo a tus personajes favoritos de la serie. Desde el alocado Rick Sánchez hasta los más excéntricos alienígenas, podrás filtrar y explorar una amplia base de datos de personajes y ubicaciones.</p>
+                <a class="btn white-btn" href="#personajes-section">Personajes</a>
+            </div>
+            <figure class="hero-image">
+                <img src="./images/rick-morty-hero.png" alt="hero image">
+            </figure>
+        </div>
+    </section>
+
+    <main>
+
+        <section id="personajes-section" class="personajes container-padding">
+            <h2>Personajes</h2>
+            <p class="personajes-text">Aquí encontrarás a todos los personajes que han pasado por el portal de teletransportación de Rick Sánchez. Desde los héroes más improbables hasta los villanos más despreciables, todos tienen su lugar en esta galería de locos. ¡Cuidado, podrías encontrarte con algunos spoilers que te dejarán con la boca abierta!</p>
+            <div id="personajes"></div>
+            <div class="personajes-btn-container">
+                <button class="show-characters btn white-btn">Ver mas personajes</button>
+                <button class="less-characters btn white-btn hidden">Ver menos</button>
+            </div>
+        </section>
+
+        <section class="cta container-padding">
+            <div class="cta-info">
+                <div class="cta-info-container">
+                    <h4>¡Potencia tu negocio con una web a medida!</h1>
+                    <p>¿Buscas un desarrollador frontend y backend para tu próximo proyecto? Con mi experiencia en React y Node.js, puedo crear aplicaciones web y móviles personalizadas y escalables. ¡Contacta conmigo para discutir tus necesidades!</p>
+                    <div class="cta-btn-container">
+                        <a class="btn white-btn" href="#personajes-section">Contacto</a>
+                        <a class="btn transparent-btn" target="_blank" href="https://wa.me/573137275474">Chatear Ahora</a>
+                    </div>
+                </div>
+                <figure class="cta-img-container">
+                    <img src="./images/rick-morty-cta.png" alt="">
+                </figure>
+            </div>
+        </section>
+
+        <section id="ubicaciones-section" class="ubicacion container-padding">
+            <h2>Ubicaciones</h2>
+            <p class="personajes-text">¿Cuál es el planeta más extraño que has visto en Rick y Morty? ¿Cuál te gustaría visitar? ¡Comparte tus opiniones con otros fans! En esta sección, podrás explorar y discutir sobre los diferentes lugares del universo de Rick y Morty. ¡Descubre teorías, curiosidades y crea tu propia lista de lugares favoritos!</p>
+            <div id="ubicaciones">
+                <div class="modal modal-close">
+                    <div class="modal-container">
+                        <button class="modal-close-btn" class="">X</button>
+                        <h6>Integrantes</h6>
+                        <div id="ubicacion-personajes"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Diseño & creación por <a href="https://www.instagram.com/juanvidal_03/" target="_blank">Juan Vidal</a></p>
+    </footer>
+    
+
+    <!-- scripts -->
+     <script type="module" src="./scripts/characters.js"></script>
+     <script type="module" src="./scripts/location.js" ></script>
+     <script type="module" src="./scripts/modal.js" defer></script>
+</body>
+</html>
